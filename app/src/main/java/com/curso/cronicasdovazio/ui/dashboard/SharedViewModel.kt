@@ -9,23 +9,23 @@ class SharedViewModel : ViewModel() {
 
     val fichaList : ArrayList<Ficha> = arrayListOf()
 
+    private val repository = Repository()
+
     fun saveCharacter(ficha: HashMap<String, Any>) {
-        Repository.saveCharacterOntoDatabase(ficha)
+        repository.saveCharacterOntoDatabase(ficha)
     }
 
-    fun readCharacters() {
-        Repository.readCharactersFromDatabase().addSnapshotListener { collection, _ ->
-            if (collection != null) {
-                for (document in collection.documents) {
-                    document.toObject(Ficha::class.java)?.let {
-                        fichaList.add(it)
-                    }
-                }
-            }
-        }
-
-
-    }
+//    fun readCharacters() {
+//        repository.readCharactersFromDatabase().addSnapshotListener { collection, _ ->
+//            if (collection != null) {
+//                for (document in collection.documents) {
+//                    document.toObject(Ficha::class.java)?.let {
+//                        fichaList.add(it)
+//                    }
+//                }
+//            }
+//        }
+//    }
 
 
 }

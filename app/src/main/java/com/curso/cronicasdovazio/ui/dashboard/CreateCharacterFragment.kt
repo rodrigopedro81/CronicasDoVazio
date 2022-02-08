@@ -4,6 +4,7 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.curso.cronicasdovazio.databinding.FragmentCreateCharacterBinding
@@ -48,17 +49,29 @@ class CreateCharacterFragment : Fragment() {
         )
         var ficha: HashMap<String, Any> = hashMapOf()
         binding.buttonSaveCharacter.setOnClickListener {
-            campos.forEach { campo ->
-                if (campo.text.isNotEmpty()) {
+            if(testAnyFieldEmpty(campos).not()) {
+                campos.forEach { campo ->
                     ficha[campo.hint.toString()] = campo.text.toString()
                 }
+                sharedViewModel.saveCharacter(ficha)
+                ficha = hashMapOf()
             }
-            sharedViewModel.saveCharacter(ficha)
-            ficha = hashMapOf()
         }
 
 
+
         return root
+    }
+
+    private fun testAnyFieldEmpty(campos: List<EditText>): Boolean {
+        var result=false
+        campos.forEach { campo ->
+            if(campo.text.isNullOrEmpty()){
+                result=true
+                return@forEach
+            }
+        }
+        return result
     }
 
     override fun onDestroyView() {
