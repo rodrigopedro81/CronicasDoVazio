@@ -30,13 +30,13 @@ class CharacterListFragment : Fragment() {
 
         _binding = FragmentCharacterListBinding.inflate(inflater, container, false)
         val root: View = binding.root
-        viewModel.readCharacters()
-        val fichas = viewModel.fichaList
-        val listAdapter = FichasAdapter(fichas as ArrayList<Ficha>)
-        binding.fichasRecyclerView.apply {
-            layoutManager = LinearLayoutManager(context)
-            adapter = listAdapter
-        }
+//        viewModel.readCharacters()
+//        val fichas = viewModel.fichaList
+//        val listAdapter = FichasAdapter(fichas as ArrayList<Ficha>)
+//        binding.fichasRecyclerView.apply {
+//            layoutManager = LinearLayoutManager(context)
+//            adapter = listAdapter
+//        }
 
         return root
     }
