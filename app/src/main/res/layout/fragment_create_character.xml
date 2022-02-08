@@ -1,0 +1,607 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.dashboard.CreateCharacterFragment">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/wallpaper_ficha"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textViewFichaDoPersonagem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:fontFamily="@font/seagram"
+        android:text="@string/fichaDoPersonagem"
+        android:textColor="@color/black"
+        android:textSize="40sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:padding="12dp"
+        app:layout_constraintBottom_toBottomOf="@+id/imageView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewFichaDoPersonagem">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/buttonSaveCharacter"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:src="@drawable/iconfodase"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondGroupConstraintLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/firstGroupConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <TextView
+                    android:id="@+id/textViewNome"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/nome"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewRaca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/raca"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewNome" />
+
+                <TextView
+                    android:id="@+id/textViewArquetipo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/arquetipo"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewRaca" />
+
+                <EditText
+                    android:id="@+id/campoNome"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/nome"
+                    android:maxLines="1"
+                    android:textColorHint="@color/common_google_signin_btn_tint"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewIdade"
+                    app:layout_constraintStart_toEndOf="@+id/textViewNome"
+                    app:layout_constraintTop_toTopOf="@+id/textViewNome" />
+
+                <EditText
+                    android:id="@+id/campoRaca"
+                    android:layout_width="120dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/raca"
+                    android:maxLines="1"
+                    android:textColorHint="@color/common_google_signin_btn_tint"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewRaca"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArquetipo"
+                    app:layout_constraintTop_toTopOf="@+id/textViewRaca" />
+
+                <EditText
+                    android:id="@+id/campoArquetipo"
+                    android:layout_width="120dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/arquetipo"
+                    android:maxLines="1"
+                    android:textColorHint="@color/common_google_signin_btn_tint"
+                    android:textSize="14sp"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArquetipo"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArquetipo" />
+
+                <TextView
+                    android:id="@+id/textViewIdade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/idade"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintEnd_toStartOf="@+id/campoIdade"
+                    app:layout_constraintTop_toTopOf="@+id/campoNome" />
+
+                <TextView
+                    android:id="@+id/textViewSexo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/sexo"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toStartOf="@+id/textViewVantagem"
+                    app:layout_constraintTop_toTopOf="@+id/campoRaca" />
+
+                <TextView
+                    android:id="@+id/textViewVantagem"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginStart="16dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/vantagem"
+                    android:textColor="@color/black"
+                    android:textSize="20sp"
+                    app:layout_constraintStart_toEndOf="@+id/campoArquetipo"
+                    app:layout_constraintTop_toTopOf="@+id/campoArquetipo" />
+
+                <EditText
+                    android:id="@+id/campoIdade"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/idade"
+                    android:maxLines="1"
+                    android:textColorHint="@color/common_google_signin_btn_tint"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/textViewIdade" />
+
+                <EditText
+                    android:id="@+id/campoSexo"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/sexo"
+                    android:maxLines="1"
+                    android:textColorHint="@color/common_google_signin_btn_tint"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@+id/campoVantagem"
+                    app:layout_constraintStart_toEndOf="@+id/textViewSexo"
+                    app:layout_constraintTop_toTopOf="@+id/textViewSexo" />
+
+                <EditText
+                    android:id="@+id/campoVantagem"
+                    android:layout_width="0dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/vantagem"
+                    android:maxLines="1"
+                    android:textColorHint="@color/common_google_signin_btn_tint"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewVantagem"
+                    app:layout_constraintTop_toTopOf="@+id/textViewVantagem" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/secondGroupConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_constraintTop_toBottomOf="@+id/firstGroupConstraintLayout">
+
+                <TextView
+                    android:id="@+id/textViewAtributos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="141dp"
+                    android:layout_marginEnd="140dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/atributos"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewCarisma3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/coragem"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewVigor"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewAutoConfianca"
+                    app:layout_constraintTop_toTopOf="@+id/textViewVigor" />
+
+                <TextView
+                    android:id="@+id/textViewForca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/forca"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewFisico" />
+
+                <TextView
+                    android:id="@+id/textViewDestreza"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/destreza"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewSentidos" />
+
+                <TextView
+                    android:id="@+id/textViewVisao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/visao"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewDestreza" />
+
+                <TextView
+                    android:id="@+id/textViewPercepcao"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/percepcao"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewVisao" />
+
+                <TextView
+                    android:id="@+id/textViewMental"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/mental"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPessoal"
+                    app:layout_constraintStart_toStartOf="@+id/textViewPessoal"
+                    app:layout_constraintTop_toTopOf="@+id/textViewSentidos" />
+
+                <TextView
+                    android:id="@+id/textViewFisico"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/fisico"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewAtributos"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAtributos" />
+
+                <TextView
+                    android:id="@+id/textViewAgilidade"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/agilidade"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewForca" />
+
+                <TextView
+                    android:id="@+id/textViewCarisma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/carisma"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewForca"
+                    app:layout_constraintEnd_toStartOf="@+id/campoCarisma"
+                    app:layout_constraintTop_toTopOf="@+id/textViewForca" />
+
+                <TextView
+                    android:id="@+id/textViewFoco"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/foco"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewCarisma3"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDestreza" />
+
+                <TextView
+                    android:id="@+id/textViewInteligencia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/inteligencia"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewCarisma3"
+                    app:layout_constraintTop_toTopOf="@+id/textViewVisao" />
+
+                <TextView
+                    android:id="@+id/textViewSabedoria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/sabedoria"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewCarisma3"
+                    app:layout_constraintTop_toTopOf="@+id/textViewPercepcao" />
+
+                <TextView
+                    android:id="@+id/textViewVigor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/vigor"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAgilidade" />
+
+                <EditText
+                    android:id="@+id/campoCarisma"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/carisma"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/campoForca"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="@+id/campoForca" />
+
+                <EditText
+                    android:id="@+id/campoCoragem"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/coragem"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/campoVigor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/campoAgilidade" />
+
+                <EditText
+                    android:id="@+id/campoDestreza"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/destreza"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewDestreza"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPercepcao"
+                    app:layout_constraintTop_toTopOf="@+id/textViewDestreza" />
+
+                <EditText
+                    android:id="@+id/campoFoco"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/foco"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewFoco"
+                    app:layout_constraintEnd_toEndOf="@+id/campoCoragem"
+                    app:layout_constraintTop_toTopOf="@+id/textViewFoco" />
+
+                <EditText
+                    android:id="@+id/campoInteligencia"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/inteligencia"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewInteligencia"
+                    app:layout_constraintEnd_toEndOf="@+id/campoFoco"
+                    app:layout_constraintTop_toTopOf="@+id/textViewInteligencia" />
+
+                <EditText
+                    android:id="@+id/campoSabedoria"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/sabedoria"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewSabedoria"
+                    app:layout_constraintEnd_toEndOf="@+id/campoInteligencia"
+                    app:layout_constraintTop_toTopOf="@+id/textViewSabedoria" />
+
+                <EditText
+                    android:id="@+id/campoVisao"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/visao"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewVisao"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPercepcao"
+                    app:layout_constraintTop_toTopOf="@+id/textViewVisao" />
+
+                <EditText
+                    android:id="@+id/campoPercepcao"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/percepcao"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewPercepcao"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPercepcao"
+                    app:layout_constraintTop_toTopOf="@+id/textViewPercepcao" />
+
+                <TextView
+                    android:id="@+id/textViewSentidos"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/sentidos"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewFisico"
+                    app:layout_constraintStart_toStartOf="@+id/textViewFisico"
+                    app:layout_constraintTop_toBottomOf="@+id/campoVigor" />
+
+                <EditText
+                    android:id="@+id/campoAutoConfianca"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginEnd="24dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/autoconfianca"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/campoAgilidade"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/campoForca" />
+
+                <TextView
+                    android:id="@+id/textViewAutoConfianca"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/autoconfianca"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewAgilidade"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewCarisma"
+                    app:layout_constraintTop_toTopOf="@+id/textViewAgilidade" />
+
+                <EditText
+                    android:id="@+id/campoForca"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:layout_marginStart="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/forca"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewForca"
+                    app:layout_constraintStart_toEndOf="@+id/textViewAgilidade"
+                    app:layout_constraintTop_toTopOf="@+id/textViewForca" />
+
+                <TextView
+                    android:id="@+id/textViewPessoal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/pessoal"
+                    android:textColor="@color/black"
+                    android:textSize="28sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewAtributos"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAtributos" />
+
+                <EditText
+                    android:id="@+id/campoAgilidade"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/agilidade"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewAgilidade"
+                    app:layout_constraintStart_toStartOf="@+id/campoForca"
+                    app:layout_constraintTop_toTopOf="@+id/textViewAgilidade" />
+
+                <EditText
+                    android:id="@+id/campoVigor"
+                    android:layout_width="70dp"
+                    android:layout_height="32dp"
+                    android:fontFamily="@font/seagram"
+                    android:hint="@string/vigor"
+                    android:maxLines="1"
+                    android:textColorHint="@color/cardview_shadow_end_color"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/textViewVigor"
+                    app:layout_constraintStart_toStartOf="@+id/campoAgilidade"
+                    app:layout_constraintTop_toTopOf="@+id/textViewVigor" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

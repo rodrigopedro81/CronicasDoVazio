@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "1004681069899",
+    "project_id": "cronicasdovazio-9aea0",
+    "storage_bucket": "cronicasdovazio-9aea0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1004681069899:android:977b0ea5e287d3d5d154ce",
+        "android_client_info": {
+          "package_name": "com.curso.cronicasdovazio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1004681069899-21dnhnd1vftm4m2n667mf431bjihccbm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDjPbjle5ixuFHKBM2KQOr17Bp2h6BFtWY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1004681069899-21dnhnd1vftm4m2n667mf431bjihccbm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

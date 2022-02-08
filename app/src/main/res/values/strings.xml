@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">CronicasDoVazio</string>
+    <string name="title_home">Fichas</string>
+    <string name="title_dashboard">Criar Personagem</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="nome">nome</string>
+    <string name="idade">idade</string>
+    <string name="raca">raca</string>
+    <string name="arquetipo">arquetipo</string>
+    <string name="sexo">sexo</string>
+    <string name="vantagem">vantagem</string>
+    <string name="atributos">Atributos</string>
+    <string name="fisico">Físico</string>
+    <string name="sentidos">Sentidos</string>
+    <string name="pessoal">Pessoal</string>
+    <string name="mental">Mental</string>
+    <string name="forca">força</string>
+    <string name="agilidade">agilidade</string>
+    <string name="vigor">vigor</string>
+    <string name="carisma">carisma</string>
+    <string name="autoconfianca">autoconfiança</string>
+    <string name="coragem">coragem</string>
+    <string name="destreza">destreza</string>
+    <string name="visao">visao</string>
+    <string name="percepcao">percepção</string>
+    <string name="foco">foco</string>
+    <string name="inteligencia">inteligencia</string>
+    <string name="sabedoria">sabedoria</string>
+    <string name="fichaDoPersonagem">Ficha do Personagem</string>
+</resources>
