@@ -1,11 +1,11 @@
-package com.curso.cronicasdovazio.model
+package com.curso.cronicasdovazio.data
 
 import android.util.Log
 import com.google.firebase.firestore.CollectionReference
 import com.google.firebase.firestore.ktx.firestore
 import com.google.firebase.ktx.Firebase
 
-class Repository {
+class FirestoreRepository {
 
     private val db = Firebase.firestore
 

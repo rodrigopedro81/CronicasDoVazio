@@ -1,4 +1,4 @@
-package com.curso.cronicasdovazio.ui.home
+package com.curso.cronicasdovazio.views.home
 
 import android.view.LayoutInflater
 import android.view.ViewGroup

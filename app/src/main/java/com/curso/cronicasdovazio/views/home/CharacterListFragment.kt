@@ -1,4 +1,4 @@
-package com.curso.cronicasdovazio.ui.home
+package com.curso.cronicasdovazio.views.home
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,10 +6,8 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import androidx.recyclerview.widget.LinearLayoutManager
 import com.curso.cronicasdovazio.databinding.FragmentCharacterListBinding
-import com.curso.cronicasdovazio.model.Ficha
-import com.curso.cronicasdovazio.ui.dashboard.SharedViewModel
+import com.curso.cronicasdovazio.views.SharedViewModel
 
 class CharacterListFragment : Fragment() {
 
