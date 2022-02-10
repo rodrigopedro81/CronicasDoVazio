@@ -7,19 +7,19 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.curso.cronicasdovazio.ui.home.CharacterListFragment"
+        android:name="com.curso.cronicasdovazio.views.home.CharacterListFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_character_list" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.curso.cronicasdovazio.ui.dashboard.CreateCharacterFragment"
+        android:name="com.curso.cronicasdovazio.views.dashboard.CreateCharacterFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_create_character" />
 
     <fragment
         android:id="@+id/navigation_notifications"
-        android:name="com.curso.cronicasdovazio.ui.notifications.NotificationsFragment"
+        android:name="com.curso.cronicasdovazio.views.notifications.NotificationsFragment"
         android:label="@string/title_notifications"
         tools:layout="@layout/fragment_notifications" />
 </navigation>

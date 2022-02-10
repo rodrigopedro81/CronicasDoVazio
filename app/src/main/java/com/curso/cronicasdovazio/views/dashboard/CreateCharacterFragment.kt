@@ -1,4 +1,4 @@
-package com.curso.cronicasdovazio.ui.dashboard
+package com.curso.cronicasdovazio.views.dashboard
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.EditText
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.curso.cronicasdovazio.databinding.FragmentCreateCharacterBinding
+import com.curso.cronicasdovazio.views.SharedViewModel
 
 class CreateCharacterFragment : Fragment() {
 

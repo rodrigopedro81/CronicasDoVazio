@@ -1,4 +1,4 @@
-package com.curso.cronicasdovazio
+package com.curso.cronicasdovazio.views.activities
 
 import android.os.Bundle
 import com.google.android.material.bottomnavigation.BottomNavigationView
@@ -7,6 +7,7 @@ import androidx.navigation.findNavController
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
+import com.curso.cronicasdovazio.R
 import com.curso.cronicasdovazio.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
