@@ -7,13 +7,13 @@
 
     <fragment
         android:id="@+id/navigation_home"
-        android:name="com.curso.cronicasdovazio.views.home.CharacterListFragment"
+        android:name="com.curso.cronicasdovazio.views.characterSheets.CharacterListFragment"
         android:label="@string/title_home"
         tools:layout="@layout/fragment_character_list" />
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.curso.cronicasdovazio.views.dashboard.CreateCharacterFragment"
+        android:name="com.curso.cronicasdovazio.views.character.CreateCharacterFragment"
         android:label="@string/title_dashboard"
         tools:layout="@layout/fragment_create_character" />
 

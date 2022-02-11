@@ -13,6 +13,10 @@ class DialogBuilder {
 
     private val fireBaseAuthRepository = FirebaseAuthRepository()
 
+    fun showSimpleWarningDialog(activity: Activity,title: String, warning: String) {
+        createWarningDialog(activity, warning, title) {}.show()
+    }
+
     fun createWarningDialog(activity:Activity, warning:String, title:String, function : () -> Unit): AlertDialog {
         val dialog: AlertDialog = activity.let {
             val builder = AlertDialog.Builder(it)

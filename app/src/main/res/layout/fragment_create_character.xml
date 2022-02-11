@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".views.dashboard.CreateCharacterFragment">
+    tools:context=".views.character.CreateCharacterFragment">
 
     <ImageView
         android:id="@+id/imageView"
@@ -55,7 +55,458 @@
                 android:src="@drawable/iconfodase"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/secondGroupConstraintLayout" />
+                app:layout_constraintTop_toBottomOf="@+id/thirdGroupConstraintLayout" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/thirdGroupConstraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="600dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/secondGroupConstraintLayout">
+
+
+                <TextView
+                    android:id="@+id/textViewPericias"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/pericias"
+                    android:textColor="@color/black"
+                    android:textSize="32sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/textViewPericias2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/combate"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewPericias" />
+
+                <TextView
+                    android:id="@+id/textViewPericias3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/conhecimentos"
+                    android:textColor="@color/black"
+                    android:textSize="26sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/imageViewEsportesPlus" />
+
+                <TextView
+                    android:id="@+id/textViewArremesso"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="16dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/arremesso"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewPericias2" />
+
+                <TextView
+                    android:id="@+id/textViewArquearia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/arquearia"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewArremesso" />
+
+                <TextView
+                    android:id="@+id/textViewBloqueio"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="12dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/bloqueio"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewArquearia" />
+
+                <TextView
+                    android:id="@+id/textViewMontaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/montaria"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewBloqueio" />
+
+                <TextView
+                    android:id="@+id/textViewLuta"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/luta"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewMontaria" />
+
+                <TextView
+                    android:id="@+id/textViewArmaLeve"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/armaleve"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewLuta" />
+
+                <TextView
+                    android:id="@+id/textViewArmaPesada"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/armapesada"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewArmaLeve" />
+
+                <TextView
+                    android:id="@+id/textViewAcrobacia"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/acrobacia"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewArmaPesada" />
+
+                <TextView
+                    android:id="@+id/textViewEsportes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:layout_marginTop="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:text="@string/esportes"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/textViewAcrobacia" />
+
+
+                <TextView
+                    android:id="@+id/textViewArremessoValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewArremessoMinus" />
+
+                <TextView
+                    android:id="@+id/textViewArqueariaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewArqueariaMinus" />
+
+                <TextView
+                    android:id="@+id/textViewBloqueioValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewBloqueioMinus" />
+
+                <TextView
+                    android:id="@+id/textViewMontariaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewMontariaMinus" />
+
+                <TextView
+                    android:id="@+id/textViewLutaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewLutaMinus" />
+
+                <TextView
+                    android:id="@+id/textViewArmaleveValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewArmaleveMinus" />
+
+                <TextView
+                    android:id="@+id/textViewArmapesadaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewArmapesadaMinus" />
+
+                <TextView
+                    android:id="@+id/textViewAcrobaciaValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewAcrobaciaMinus" />
+
+                <TextView
+                    android:id="@+id/textViewEsportesValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/seagram"
+                    android:text="0"
+                    android:textColor="@color/black"
+                    android:textSize="18sp"
+                    app:layout_constraintEnd_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArmaPesada"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewEsportesMinus" />
+
+                <TextView
+                    android:id="@+id/textViewArremessoDescription"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:fontFamily="@font/seagram"
+                    android:textColor="@color/grey"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="@+id/imageViewArremessoPlus"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@+id/textViewPericias2"
+                    app:layout_constraintTop_toTopOf="@+id/imageViewArremessoPlus" />
+
+                <ImageView
+                    android:id="@+id/imageViewArremessoPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArremessoValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewArqueariaPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArqueariaValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewBloqueioPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewBloqueioValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewMontariaPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewMontariaValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewLutaPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewLutaValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewArmalevePlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArmaleveValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewArmapesadaPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArmapesadaValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewAcrobaciaPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewAcrobaciaValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewEsportesPlus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:src="@drawable/ic_baseline_add_circle_24"
+                    app:layout_constraintStart_toEndOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewEsportesValue" />
+
+                <ImageView
+                    android:id="@+id/imageViewArremessoMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArremesso" />
+
+                <ImageView
+                    android:id="@+id/imageViewArqueariaMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArquearia" />
+
+                <ImageView
+                    android:id="@+id/imageViewBloqueioMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewBloqueio" />
+
+                <ImageView
+                    android:id="@+id/imageViewMontariaMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewMontaria" />
+
+                <ImageView
+                    android:id="@+id/imageViewLutaMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewLuta" />
+
+                <ImageView
+                    android:id="@+id/imageViewArmaleveMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArmaLeve" />
+
+                <ImageView
+                    android:id="@+id/imageViewArmapesadaMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewArmaPesada" />
+
+                <ImageView
+                    android:id="@+id/imageViewAcrobaciaMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewAcrobacia" />
+
+                <ImageView
+                    android:id="@+id/imageViewEsportesMinus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="8dp"
+                    android:src="@drawable/ic_baseline_remove_circle_24"
+                    app:layout_constraintEnd_toStartOf="@+id/textViewArremessoValue"
+                    app:layout_constraintTop_toTopOf="@+id/textViewEsportes" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
 
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:id="@+id/firstGroupConstraintLayout"
@@ -70,7 +521,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/nome"
+                    android:text="@string/nomeT"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -82,7 +533,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/raca"
+                    android:text="@string/racaT"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -94,7 +545,7 @@
                     android:layout_height="40dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/arquetipo"
+                    android:text="@string/arquetipoT"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -145,7 +596,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/idade"
+                    android:text="@string/idadeT"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintEnd_toStartOf="@+id/campoIdade"
@@ -156,7 +607,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="40dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/sexo"
+                    android:text="@string/sexoT"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toStartOf="@+id/textViewVantagem"
@@ -168,7 +619,7 @@
                     android:layout_height="40dp"
                     android:layout_marginStart="16dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/vantagem"
+                    android:text="@string/vantagemT"
                     android:textColor="@color/black"
                     android:textSize="20sp"
                     app:layout_constraintStart_toEndOf="@+id/campoArquetipo"
@@ -243,7 +694,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/coragem"
+                    android:text="@string/coragemT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textViewVigor"
@@ -257,7 +708,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/forca"
+                    android:text="@string/forcaT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -270,7 +721,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/destreza"
+                    android:text="@string/destrezaT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -283,7 +734,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/visao"
+                    android:text="@string/visaoT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -296,7 +747,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/percepcao"
+                    android:text="@string/percepcaoT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -333,7 +784,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/agilidade"
+                    android:text="@string/agilidadeT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -345,7 +796,7 @@
                     android:layout_height="wrap_content"
                     android:layout_marginEnd="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/carisma"
+                    android:text="@string/carismaT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textViewForca"
@@ -357,7 +808,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/foco"
+                    android:text="@string/focoT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@+id/textViewCarisma3"
@@ -368,7 +819,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/inteligencia"
+                    android:text="@string/inteligenciaT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@+id/textViewCarisma3"
@@ -379,7 +830,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/sabedoria"
+                    android:text="@string/sabedoriaT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintEnd_toEndOf="@+id/textViewCarisma3"
@@ -392,7 +843,7 @@
                     android:layout_marginStart="10dp"
                     android:layout_marginTop="8dp"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/vigor"
+                    android:text="@string/vigorT"
                     android:textColor="@color/black"
                     android:textSize="22sp"
                     app:layout_constraintStart_toStartOf="parent"
@@ -539,7 +990,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:fontFamily="@font/seagram"
-                    android:text="@string/autoconfianca"
+                    android:text="@string/autoconfiancaT"
                     android:textColor="@color/black"
                     android:textSize="18sp"
                     app:layout_constraintBottom_toBottomOf="@+id/textViewAgilidade"

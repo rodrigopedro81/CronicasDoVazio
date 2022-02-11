@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Estrutura das descrições em tempo real das perícias -->
+    <string name="arremesso0">- 3 para toda rolagem de dados em situações de arremesso</string>
+    <string name="arremesso1">+ 1 para toda rolagem de dados em situações de arremesso</string>
+    <string name="arremesso2">+ 2 para toda rolagem de dados em situações de arremesso</string>
+    <string name="arremesso3">+ 3 para toda rolagem de dados em situações de arremesso</string>
+    <string name="arremesso4">+ 4 para toda rolagem de dados em situações de arremesso</string>
+    <string name="arremesso5">+ 5 para toda rolagem de dados em situações de arremesso</string>
+
+
+</resources>
