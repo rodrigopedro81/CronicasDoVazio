@@ -4,33 +4,70 @@
     <string name="title_home">Fichas</string>
     <string name="title_dashboard">Criar Personagem</string>
     <string name="title_notifications">Notifications</string>
+
+    <!-- Estrutura da criação de ficha do universo de Crônicas do Vazio -->
+    <string name="nomeT">Nome:</string>
     <string name="nome">nome</string>
     <string name="idade">idade</string>
+    <string name="idadeT">Idade:</string>
     <string name="raca">raca</string>
+    <string name="racaT">Raça:</string>
+    <string name="arquetipoT">Arquétipo:</string>
     <string name="arquetipo">arquetipo</string>
+    <string name="sexoT">Sexo:</string>
     <string name="sexo">sexo</string>
     <string name="vantagem">vantagem</string>
+    <string name="vantagemT">Vantagem:</string>
     <string name="atributos">Atributos</string>
     <string name="fisico">Físico</string>
     <string name="sentidos">Sentidos</string>
     <string name="pessoal">Pessoal</string>
     <string name="mental">Mental</string>
-    <string name="forca">força</string>
+    <string name="forca">forca</string>
+    <string name="forcaT">Força:</string>
     <string name="agilidade">agilidade</string>
+    <string name="agilidadeT">Agilidade:</string>
     <string name="vigor">vigor</string>
+    <string name="vigorT">Vigor:</string>
     <string name="carisma">carisma</string>
-    <string name="autoconfianca">autoconfiança</string>
+    <string name="carismaT">Carisma:</string>
+    <string name="autoconfianca">autoconfianca</string>
+    <string name="autoconfiancaT">Auto-confiança:</string>
     <string name="coragem">coragem</string>
+    <string name="coragemT">Coragem:</string>
     <string name="destreza">destreza</string>
+    <string name="destrezaT">Destreza:</string>
     <string name="visao">visao</string>
-    <string name="percepcao">percepção</string>
+    <string name="visaoT">Visão:</string>
+    <string name="percepcao">percepcao</string>
+    <string name="percepcaoT">Percepção:</string>
     <string name="foco">foco</string>
+    <string name="focoT">Foco:</string>
     <string name="inteligencia">inteligencia</string>
+    <string name="inteligenciaT">Inteligência</string>
     <string name="sabedoria">sabedoria</string>
+    <string name="sabedoriaT">Sabedoria:</string>
     <string name="fichaDoPersonagem">Ficha do Personagem</string>
     <string name="usuario">Digite seu usuário:</string>
     <string name="senha">Digite sua senha:</string>
     <string name="login">Login</string>
     <string name="registrar">Registrar</string>
-    <string name="ok">Ok</string>
+    <string name="ok">OK</string>
+    <string name="combate">Combate</string>
+    <string name="conhecimentos">Conhecimentos</string>
+    <string name="sociabilidade">Sociabilidade</string>
+    <string name="pericias">Perícias</string>
+    <string name="arremesso">Arremesso</string>
+    <string name="arquearia">Arquearia</string>
+    <string name="bloqueio">Bloqueio</string>
+    <string name="montaria">Montaria</string>
+    <string name="luta">Luta</string>
+    <string name="armaleve">Arma leve</string>
+    <string name="armapesada">Arma pesada</string>
+    <string name="acrobacia">Acrobacia</string>
+    <string name="esportes">Esportes</string>
+
+
+
+
 </resources>
