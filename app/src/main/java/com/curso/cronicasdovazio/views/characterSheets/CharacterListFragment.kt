@@ -6,7 +6,9 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.curso.cronicasdovazio.R
 import com.curso.cronicasdovazio.databinding.FragmentCharacterListBinding
 import com.curso.cronicasdovazio.model.Ficha
 import com.curso.cronicasdovazio.views.SharedViewModel
@@ -32,8 +34,16 @@ class CharacterListFragment : Fragment() {
         _binding = FragmentCharacterListBinding.inflate(inflater, container, false)
         val root: View = binding.root
         updateUI()
+
+        binding.addCharacterButton.setOnClickListener {
+            Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main)
+                .navigate(R.id.goToCharacterSheetFragment)
+            it.visibility = View.GONE
+        }
         return root
     }
+
+
 
     private fun updateUI() {
         viewModel.readCharacters {
@@ -50,12 +60,16 @@ class CharacterListFragment : Fragment() {
     }
 
     fun deleteCharacter(ficha: Ficha?) {
-        viewModel.deleteCharacter(ficha)
-        updateUI()
+        viewModel.deleteCharacter(ficha){
+            updateUI()
+        }
+
     }
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
+
+
 }

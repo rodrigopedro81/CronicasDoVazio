@@ -10,18 +10,20 @@ class FirestoreRepository {
 
     private val db = Firebase.firestore
 
-    fun saveCharacterOntoDatabase(ficha: MutableMap<String, Any>) {
+    fun saveCharacterOntoDatabase(ficha: MutableMap<String, Any>, function: () -> Unit) {
         db.collection("Fichas")
             .document("Ficha de ${ficha["nome"]}")
             .set(ficha)
-            .addOnSuccessListener { Log.d("TAG", "Deu certo!") }
+            .addOnSuccessListener { function() }
             .addOnFailureListener { Log.d("TAG", "Deu ruim!") }
     }
 
     fun readCharactersFromDatabase(): CollectionReference = db.collection("Fichas")
 
-    fun deleteCharacter(ficha: Ficha?) {
-        db.collection("Fichas").document("Ficha de ${ficha?.nome}").delete()
+    fun deleteCharacter(ficha: Ficha?, function: () -> Unit) {
+        db.collection("Fichas").document("Ficha de ${ficha?.nome}")
+            .delete().addOnSuccessListener {
+                function()
+            }
     }
-
 }

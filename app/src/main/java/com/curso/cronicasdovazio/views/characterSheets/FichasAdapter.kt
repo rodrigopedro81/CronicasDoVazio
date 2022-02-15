@@ -2,13 +2,15 @@ package com.curso.cronicasdovazio.views.characterSheets
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import com.curso.cronicasdovazio.databinding.FichaItemBinding
 import com.curso.cronicasdovazio.model.Ficha
+import com.curso.cronicasdovazio.views.character.CharacterSheetFragment
 
 class FichasAdapter(
     private val fichas: ArrayList<Ficha>?,
-    private val fragment: CharacterListFragment?
+    private val fragment: Fragment?
 ) :
     RecyclerView.Adapter<FichasAdapter.FichaViewHolder>() {
 
@@ -24,8 +26,15 @@ class FichasAdapter(
 
     override fun onBindViewHolder(holder: FichaViewHolder, position: Int) {
         holder.binding.textViewCharacterName.text = fichas?.get(position)?.nome
+        holder.binding.root.setOnClickListener {
+            if (fragment is CharacterSheetFragment) {
+                fragment.openCharacterSheet(fichas?.get(position))
+            }
+        }
         holder.binding.buttonDelete.setOnClickListener {
-            fragment?.deleteCharacter(fichas?.get(position))
+            if (fragment is CharacterListFragment) {
+                fragment.deleteCharacter(fichas?.get(position))
+            }
         }
     }
 

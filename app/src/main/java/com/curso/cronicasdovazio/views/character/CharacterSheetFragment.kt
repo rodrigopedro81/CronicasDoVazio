@@ -9,11 +9,14 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
+import com.curso.cronicasdovazio.R
 import com.curso.cronicasdovazio.databinding.FragmentCreateCharacterBinding
+import com.curso.cronicasdovazio.model.Ficha
 import com.curso.cronicasdovazio.utils.*
 import com.curso.cronicasdovazio.views.SharedViewModel
 
-class CreateCharacterFragment : Fragment() {
+class CharacterSheetFragment : Fragment() {
 
     private lateinit var sharedViewModel: SharedViewModel
     private var _binding: FragmentCreateCharacterBinding? = null
@@ -74,7 +77,10 @@ class CreateCharacterFragment : Fragment() {
                 characterSheet[Constants.listOfExpertises[index]] = textView.text.toString()
             }
             characterSheet["accessibleBy"] = sharedViewModel.currentUser()?.email.toString()
-            sharedViewModel.saveCharacter(characterSheet)
+            sharedViewModel.saveCharacter(characterSheet){
+                Navigation.findNavController(requireActivity(), R.id.nav_host_fragment_activity_main)
+                    .navigate(R.id.goToCharacterSheetListFragment)
+            }
             characterSheet = mutableMapOf()
         } else {
             dialogBuilder.showSimpleWarningDialog(requireActivity(), "Aviso", "Preencha todos os campos!")
@@ -211,9 +217,18 @@ class CreateCharacterFragment : Fragment() {
         )
     }
 
+    fun openCharacterSheet(characterSheet: Ficha?) {
+        characterSheet?.let { nonNullCharacterSheet ->
+            view?.run{
+                Navigation.findNavController(this).navigate(R.id.goToCharacterSheetFragment)
+                sharedViewModel.selectedCharacterSheet=nonNullCharacterSheet
+            }
+        }
+    }
+
     override fun onDestroyView() {
         super.onDestroyView()
-        mapCharacterSheet()
+        //mapTempCharacterSheet()
         _binding = null
     }
 }

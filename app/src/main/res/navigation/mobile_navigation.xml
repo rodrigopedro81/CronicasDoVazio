@@ -9,13 +9,21 @@
         android:id="@+id/navigation_home"
         android:name="com.curso.cronicasdovazio.views.characterSheets.CharacterListFragment"
         android:label="@string/title_home"
-        tools:layout="@layout/fragment_character_list" />
+        tools:layout="@layout/fragment_character_list" >
+        <action
+            android:id="@+id/goToCharacterSheetFragment"
+            app:destination="@id/navigation_dashboard" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_dashboard"
-        android:name="com.curso.cronicasdovazio.views.character.CreateCharacterFragment"
+        android:name="com.curso.cronicasdovazio.views.character.CharacterSheetFragment"
         android:label="@string/title_dashboard"
-        tools:layout="@layout/fragment_create_character" />
+        tools:layout="@layout/fragment_create_character" >
+        <action
+            android:id="@+id/goToCharacterSheetListFragment"
+            app:destination="@id/navigation_home" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_notifications"

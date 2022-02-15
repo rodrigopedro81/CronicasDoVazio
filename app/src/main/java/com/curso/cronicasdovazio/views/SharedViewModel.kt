@@ -1,6 +1,5 @@
 package com.curso.cronicasdovazio.views
 
-import android.util.Log
 import androidx.lifecycle.ViewModel
 import com.curso.cronicasdovazio.data.FirebaseAuthRepository
 import com.curso.cronicasdovazio.model.Ficha
@@ -15,7 +14,13 @@ class SharedViewModel : ViewModel() {
 
     var characterSheetList : ArrayList<Ficha>? = ArrayList<Ficha>()
 
-    fun saveCharacter(ficha: MutableMap<String, Any>) = repository.saveCharacterOntoDatabase(ficha)
+    var selectedCharacterSheet : Ficha = Ficha()
+
+    fun saveCharacter(ficha: MutableMap<String, Any>, function: () -> Unit) {
+        repository.saveCharacterOntoDatabase(ficha){
+            function()
+        }
+    }
 
     fun signOut(function: () -> Unit) = firebaseAuthRepository.logout {
         function()
@@ -38,8 +43,10 @@ class SharedViewModel : ViewModel() {
         }
     }
 
-    fun deleteCharacter(ficha: Ficha?) {
-        repository.deleteCharacter(ficha)
+    fun deleteCharacter(ficha: Ficha?, function: () -> Unit) {
+        repository.deleteCharacter(ficha){
+            function()
+        }
     }
 
 }
